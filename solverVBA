@@ -1,0 +1,22 @@
+Sub Complete()
+
+    Dim lngMyRow As Long
+    Dim lngLastRow As Long
+    
+    'Find where the last row currently resides from columns A to G (inclusive)
+    lngLastRow = Range("G:N").Find("*", SearchOrder:=xlByRows, SearchDirection:=xlPrevious).Row
+    
+    Application.ScreenUpdating = False
+    
+    For lngMyRow = 1 To lngLastRow
+        Application.Run "SolverReset"
+        Application.Run "SolverAdd", "$B$" & lngMyRow & ":$C$" & lngMyRow & ":$D$" & lngMyRow & ":$E$" & lngMyRow & ":$F$" & lngMyRow, 3, "1"
+        Application.Run "SolverAdd", "$B$" & lngMyRow & ":$C$" & lngMyRow & ":$D$" & lngMyRow & ":$E$" & lngMyRow & ":$F$" & lngMyRow, 1, "7"
+        Application.Run "SolverAdd", "$W$" & lngMyRow & ":$X$" & lngMyRow & ":$Y$" & lngMyRow & ":$Z$" & lngMyRow & ":$AA$" & lngMyRow & ":$AB$" & lngMyRow & ":$AC$" & lngMyRow & ":$AD$" & lngMyRow, 3, "0"
+        Application.Run "SolverOk", "$AE$" & lngMyRow, 2, "0", "$B$" & lngMyRow & ":$C$" & lngMyRow & ":$D$" & lngMyRow & ":$E$" & lngMyRow & ":$F$" & lngMyRow
+        Application.Run "SolverSolve", True
+    Next lngMyRow
+    
+    Application.ScreenUpdating = True
+
+End Sub
