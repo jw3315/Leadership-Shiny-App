@@ -51,3 +51,5 @@ o	Difference between predicted LOC and real LOC: diff = predLOC - realLOC
 o	To minimize sum(squared diff for every orientation), find non-negtive solution of P as P* ( constraint: P>=0, diff>=0)
 
 o	leadership potential score = 10%*motivation+15%*curiosity+20%*Insight+25%*Engagement+30%*Determination.
+
+** Thanks Martha Underwood for the initial and main idea of this leadership potential model.
