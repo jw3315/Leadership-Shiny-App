@@ -1,0 +1,12 @@
+name: leadershippotentialmodel
+title: LeadershipPotentialModel
+username:
+account: jiawang
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 372917
+bundleId: 1467115
+url: https://jiawang.shinyapps.io/leadershippotentialmodel/
+when: 1530830821.79385
+asMultiple: FALSE
+asStatic: FALSE
